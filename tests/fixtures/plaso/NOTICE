@@ -1,0 +1,8 @@
+These files are plaso's test data, under the Apache License 2.0 (LICENSE,
+in this directory). Copyright the plaso authors.
+
+Source: https://github.com/log2timeline/plaso, test_data/, at commit
+91b6849503b125267d00ea134248e4fe59e5479c. Unmodified (SHA-256):
+
+  apple.bsm    58205d28625208f7924046787f591ce780560a5ea46063d4c920480da4c6ef73
+  openbsm.bsm  d3a0f3ac3c801190ec2f5aa1d3297851d5e3a188dcac670101b7ef479ad372d1

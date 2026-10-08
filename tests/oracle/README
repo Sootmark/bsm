@@ -1,0 +1,11 @@
+plaso-bsm.tsv.gz: what plaso's bsm_log parser reads from the two trails in
+tests/fixtures/plaso/, written by gen.py from psort's JSON lines output:
+
+  docker run log2timeline/plaso:20260720 log2timeline --parsers bsm_log \
+    --storage-file bsm.plaso <the two files>
+  docker run log2timeline/plaso:20260720 psort -o json_line -w plaso.jsonl bsm.plaso
+  python3 -I gen.py plaso.jsonl | gzip -9n > plaso-bsm.tsv.gz
+
+plaso reads a header's sub-second field as microseconds; OpenBSM writes
+milliseconds (bsm_token.c: "We need time in ms"), as praudit shows them.
+The field is compared as written.
